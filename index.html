@@ -4,63 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Now!</title>
+    <title>Odin Signup</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="side-pane">
-        <div class="logo"><img src="images/odin-lined.png" alt="Odin Logo" id="odin-logo">ODIN</div>
-        <div class="credits">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com">Unsplash</a></div>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="res/images/odin-lined.png" alt="Odin Logo" id="odin-logo">
+            ODIN
+        </div>
+        <div class="credits">
+            Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a>
+        </div>
     </div>
     
-    <div class="sign-up-pane">
-        <div class="inspiration">
-            This is not a real online service! You know you need something
-            like this in your life to help you realize your deepest dreams.
-            Sign up <em>now</em> to get started.
-            <br><br>
-            You <em>know</em> you want to.
+    <div class="sign-up">
+        <div class="intro">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+            <p>Sign up <i>now</i> to get started.</p>
+            <p id="encouragement">You <i>know</i> you want to.</p>
         </div>
+        <div class="form">
+            <p id="form-heading">Let's do this!</p>
+            <form action="/">
+                <div class="input-row">
+                    <div class="input">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" name="first-name" id="first-name" class="input-field" required>
+                    </div>
+                    <div class="input">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" name="last-name" id="last-name" class="input-field">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" class="input-field" required>
+                    </div>
+                    <div class="input">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="tel" name="phone-number" id="phone-number" class="input-field">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password" class="input-field" required>
+                    </div>
+                    <div class="input">
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirm-password" id="confirm-password" class="input-field" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="submit">
+            <button type="submit" id="create-account">Create Account</button>
 
-        <form action="" method="post" id="form">
-            <h3>Let's do this!</h3>
-            <div class="form-row">
-                <div class="input">
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" name="first-name" id="first-name">
-                </div>
-                <div class="input column-2">
-                    <label for="last-name">LAST NAME</label>
-                    <input type="text" name="last-name" id="last-name">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="input">
-                    <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <div class="input column-2">
-                    <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" name="phone" id="phone">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="input password">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password" required>
-                </div>
-                <div class="input confirm-password column-2">
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirm-password" id="confirm-password" required>
-                </div>
-            </div>
-        </form>
-        <div class="buttons">
-            <button type="button" form="form" id="submit">Create Account</button>
-
-            <p id="login">Already have an account? <a href="">Log in</a></p>
+            <div class="log-in">Already have an account? <a href="/">Log in</a></div>
         </div>
     </div>
 </body>

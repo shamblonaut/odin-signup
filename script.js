@@ -1,18 +1,18 @@
-const password = document.querySelector('#password');
-const confirmPassword = document.querySelector('#confirm-password');
-const submitButton = document.querySelector('button#submit');
-const form = document.querySelector('form');
-const passwordContainer = document.querySelector('.input.password');
+let password = document.querySelector('#password');
+let confirmPassword = document.querySelector('#confirm-password');
+let submit = document.querySelector('button#create-account');
+let form = document.querySelector('form');
 
-submitButton.addEventListener('click', () => {
+submit.addEventListener('click', () => {
     if(password.value !== confirmPassword.value) {
         password.classList.add('error');
+        password.parentElement.classList.add('error');
         confirmPassword.classList.add('error');
-        passwordContainer.classList.add('error');
-    } else {
+    }
+    else {
         password.classList.remove('error');
+        password.parentElement.classList.remove('error');
         confirmPassword.classList.remove('error');
-        passwordContainer.classList.remove('error');
         form.requestSubmit();
     }
 });
